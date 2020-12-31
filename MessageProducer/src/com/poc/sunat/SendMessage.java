@@ -37,13 +37,13 @@ public class SendMessage {
 
 	// Create variables for the connection to MQ
 	private static final String HOST = "localhost"; // Host name or IP address
-	private static final int PORT = 1415; // Listener port for your queue manager
-	private static final String CHANNEL = "FXNQMGRIIB.SVRCONN"; // Channel name
+	private static final int PORT = 1416; // Listener port for your queue manager
+	private static final String CHANNEL = "GTW.SERCONN"; // Channel name
 	//private static final String CHANNEL = "FXN.TEST"; // Channel name
-	private static final String QMGR = "FXNQMGRIIB"; // Queue manager name
+	private static final String QMGR = "GTWQM"; // Queue manager name
 	private static final String APP_USER = "mqm"; // User name that application uses to connect to MQ
 	private static final String APP_PASSWORD = "020kw31xx"; // Password that the application uses to connect to MQ
-	private static final String QUEUE_NAME = "SUNAT_IN"; // Queue that the application uses to put and get messages to and from
+	private static final String QUEUE_NAME = "INVENTQ"; // Queue that the application uses to put and get messages to and from
 
 
 	/**
@@ -85,9 +85,8 @@ public class SendMessage {
 			long uniqueNumber=0;
 			TextMessage message=null;
 			
-			int numMessages=5;
 			
-			numMessages = ((System.getenv("NUM_MENSAJES"))!=null ? Integer.parseInt(System.getenv("NUM_MENSAJES")):5);
+			int numMessages = ((System.getenv("NUM_MENSAJES"))!=null ? Integer.parseInt(System.getenv("NUM_MENSAJES")):10);
 				
 			System.out.println("Num Messages="+numMessages);
 			
@@ -100,7 +99,7 @@ public class SendMessage {
 				producer.send(destination, message);
 				System.out.println("Sent message:"+numMessages);
 				numMessages=numMessages-1;
-				Thread.sleep(1500);
+				Thread.sleep(1000);
 			}while(numMessages!=0);
 			
 
