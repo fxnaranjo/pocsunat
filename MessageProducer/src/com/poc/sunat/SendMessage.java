@@ -86,7 +86,7 @@ public class SendMessage {
 			TextMessage message=null;
 			
 			
-			int numMessages = ((System.getenv("NUM_MENSAJES"))!=null ? Integer.parseInt(System.getenv("NUM_MENSAJES")):10);
+			int numMessages = ((System.getenv("NUM_MENSAJES"))!=null ? Integer.parseInt(System.getenv("NUM_MENSAJES")):8);
 				
 			System.out.println("Num Messages="+numMessages);
 			
