@@ -39,6 +39,7 @@ public class SendMessage {
 	private static final String HOST = "localhost"; // Host name or IP address
 	private static final int PORT = 1415; // Listener port for your queue manager
 	private static final String CHANNEL = "FXNQMGRIIB.SVRCONN"; // Channel name
+	//private static final String CHANNEL = "FXN.TEST"; // Channel name
 	private static final String QMGR = "FXNQMGRIIB"; // Queue manager name
 	private static final String APP_USER = "mqm"; // User name that application uses to connect to MQ
 	private static final String APP_PASSWORD = "020kw31xx"; // Password that the application uses to connect to MQ
