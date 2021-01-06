@@ -17,16 +17,28 @@ public class MQSample {
 
 
   // define the name of the QueueManager
-   private static final String qManager = "GTWQM";
+   //private static final String qManager = "GTWQM";
+   private static final String qManager = "QM1";
+   
+   
   // and define the name of the Queue
-  private static final String qName = "INVENTQ";
-  //private static final String qName = "FXN";
+  //private static final String qName = "INVENTQ";
+  //private static final String qName = "DEV.QUEUE.1";
+  private static final String qName = "SUNAT.IN";
   
-  private static final String HOSTNAME="178.16.222.1";
-  private static final String PORT="1416";
-  private static final String CHANNEL="GTW.SERCONN";
-  private static final String USER="mqm";
-  private static final String PASSWORD="020kw31xx";
+  private static final String HOSTNAME="qm1-ibm-mq-qm-mq.mqcluster2-028793c348bcbafefe835476dfb2d2fa-0000.eu-de.containers.appdomain.cloud";
+  //private static final String HOSTNAME="393cf95d-us-east.lb.appdomain.cloud";
+  //private static final String HOSTNAME="localhost";
+  
+  //private static final String PORT="1416";
+  //private static final String PORT="1414";
+  private static final String PORT="443";
+  
+  //private static final String CHANNEL="GTW.SERCONN";
+  private static final String CHANNEL="QM1.SVRCONN";
+  
+  private static final String USER="fnaranjo";
+  private static final String PASSWORD="020kw31x3";
   
   
 
@@ -43,9 +55,9 @@ public class MQSample {
        properties.put("hostname", HOSTNAME);
        properties.put("port", new Integer(Integer.parseInt(PORT)));
        properties.put("channel", CHANNEL);
-       properties.put(MQConstants.USER_ID_PROPERTY, USER);
-       properties.put(MQConstants.USE_MQCSP_AUTHENTICATION_PROPERTY, true);
-       properties.put(MQConstants.PASSWORD_PROPERTY, PASSWORD);
+       //properties.put(MQConstants.USER_ID_PROPERTY, USER);
+      // properties.put(MQConstants.USE_MQCSP_AUTHENTICATION_PROPERTY, true);
+      // properties.put(MQConstants.PASSWORD_PROPERTY, PASSWORD);
        
        
     	

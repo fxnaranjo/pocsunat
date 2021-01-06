@@ -37,14 +37,23 @@ public class SendMessage {
 
 	// Create variables for the connection to MQ
 	private static final String HOST = "localhost"; // Host name or IP address
+	//private static final String HOST = "393cf95d-us-east.lb.appdomain.cloud";
+	
 	private static final int PORT = 1416; // Listener port for your queue manager
+	//private static final int PORT = 1414; // Listener port for your queue manager
+	
 	private static final String CHANNEL = "GTW.SERCONN"; // Channel name
-	//private static final String CHANNEL = "FXN.TEST"; // Channel name
+	//private static final String CHANNEL = "DEV.APP.SVRCONN"; // Channel name
+	
+	//private static final String QMGR = "QM1";
 	private static final String QMGR = "GTWQM"; // Queue manager name
-	private static final String APP_USER = "mqm"; // User name that application uses to connect to MQ
-	private static final String APP_PASSWORD = "020kw31xx"; // Password that the application uses to connect to MQ
-	private static final String QUEUE_NAME = "INVENTQ"; // Queue that the application uses to put and get messages to and from
-
+	
+	private static final String APP_USER = "fnaranjo"; // User name that application uses to connect to MQ
+	private static final String APP_PASSWORD = "020kw31x3"; // Password that the application uses to connect to MQ
+	
+	//private static final String QUEUE_NAME = "DEV.QUEUE.1"; // Queue that the application uses to put and get messages to and from
+	//private static final String QUEUE_NAME = "INVENTQ"; // Queue that the application uses to put and get messages to and from
+	private static final String QUEUE_NAME = "FXN";
 
 	/**
 	 * Main method
